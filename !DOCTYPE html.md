@@ -1,83 +1,52 @@
 <!DOCTYPE html>  
-<html>  
+<html lang="en">  
 <head>  
 <meta charset="UTF-8">  
-<title>For My Begumm ❤️</title>  
+<title>For My Begum ❤️</title>  
   
 <style>  
-  
 body{  
-margin:0;  
-font-family: 'Segoe UI', sans-serif;  
-background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffc3a0);  
-height:100vh;  
-display:flex;  
-justify-content:center;  
-align-items:center;  
-overflow:hidden;  
+    margin:0;  
+    font-family:Arial;  
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);  
+    display:flex;  
+    justify-content:center;  
+    align-items:center;  
+    height:100vh;  
 }  
-  
-/* envelope */  
   
 .envelope{  
-width:220px;  
-height:140px;  
-background:#fff;  
-position:relative;  
-cursor:pointer;  
-border-radius:8px;  
-box-shadow:0 20px 40px rgba(0,0,0,.3);  
-transition:.4s;  
+    width:200px;  
+    height:120px;  
+    background:white;  
+    position:relative;  
+    cursor:pointer;  
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);  
 }  
   
-.envelope:hover{  
-transform:scale(1.08);  
+.envelope:before{  
+    content:"";  
+    position:absolute;  
+    top:-60px;  
+    left:0;  
+    border-left:100px solid transparent;  
+    border-right:100px solid transparent;  
+    border-bottom:60px solid white;  
 }  
   
-.flap{  
-position:absolute;  
-top:-70px;  
-border-left:110px solid transparent;  
-border-right:110px solid transparent;  
-border-bottom:70px solid #fff;  
+.message{  
+    display:none;  
+    max-width:600px;  
+    background:white;  
+    padding:30px;  
+    border-radius:15px;  
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);  
+    overflow:auto;  
+    height:70vh;  
 }  
   
-/* letter */  
-  
-#letter{  
-display:none;  
-position:absolute;  
-background:white;  
-width:85%;  
-max-width:700px;  
-height:70vh;  
-overflow:auto;  
-padding:35px;  
-border-radius:20px;  
-box-shadow:0 25px 60px rgba(0,0,0,.4);  
-color:#333;  
-}  
-  
-/* hearts */  
-  
-.heart{  
-position:absolute;  
-font-size:22px;  
-animation:fall linear infinite;  
-}  
-  
-@keyframes fall{  
-  
-0%{  
-transform:translateY(-100px);  
-opacity:1;  
-}  
-  
-100%{  
-transform:translateY(100vh);  
-opacity:0;  
-}  
-  
+h2{  
+text-align:center;  
 }  
   
 </style>  
@@ -85,80 +54,62 @@ opacity:0;
   
 <body>  
   
-<div class="envelope" onclick="openLetter()">  
-<div class="flap"></div>  
-</div>  
+<div class="envelope" onclick="openEnvelope()"></div>  
   
-<div id="letter">  
+<div class="message" id="msg">  
 <h2>For My Begumm ❤️</h2>  
-<p id="text"></p>  
-</div>  
   
-<audio id="music" loop>  
-<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8c8a73467.mp3">  
-</audio>  
+<p>  
+Mere ladlyyyyy future begummmm<br><br>  
+  
+Ma jane se pehle ye kahna chahta k<br><br>  
+  
+I promise that k nikah k bad tm ne jasa Socha hua hm wase h life guzre g<br>  
+Blkay us se b kahin gunah zayda axhe<br>  
+Ma gurente deta k hmre life same wase h ho g jasa tm chahti jasa hm dono ne mil kr socha hua ❤️<br><br>  
+  
+Jasa tm ne muje call pr bataya thaaaaaaa bilkul wasaaa hiiiii<br>  
+Jasa tm chahti ek ghr ho us ma srf ma or tm<br>  
+Hm mil kr cooking krein<br>  
+Ma talwat kru or mere shoulder pr tmra sr<br>  
+Bilkul asa he ho ga begum<br>  
+I promise 🤍<br><br>  
+  
+Ma talwat pr ke sunao ga tm mere shoulder pr sr rkna 🤍<br>  
+Dherrr sare batein krein ge hr topic k relatedd<br>  
+Kabheeee ma bolo gaaa tm sunaaa<br>  
+Kabhe tm bolna ma suno gaaaa<br><br>  
+  
+Sameeeee dressing krein g jaha b jain ge<br>  
+Tme khd apne hatho se kana kilaua kro ga<br>  
+Tme khd apne hato se mehndi lagaya kro gaa<br>  
+Apne hatho se tmre hatho ma churian pehnaya kru ga ❤️<br>  
+Khd tme rings pehnaya kro ga apne se 🤍<br><br>  
+  
+Tmre balo pr brush b ma h kia kru ga 🫠❤️<br>  
+Hr chzzz hm mil kr krein h<br><br>  
+  
+Bs ma itna kahna chahta jasa tm chahti hm waseeee h life gusre g mere ladlyyyy begummmmm 🤍<br>  
+Tmra hathh kabhii ni chorne wala<br>  
+Ekele ma bi nahi or na h sb k smne 🤍<br><br>  
+  
+Begummmm ma tm se behadd pyar krta<br>  
+Khd se b zaydaaaaaaaaaaaaaaa<br>  
+Maaaa srfff tmraaaaa huuuuuuu<br>  
+SRF TMAAAHARAAAA<br><br>  
+  
+I will really missss uhh alotttt Begummmmmm 🫠❤️<br>  
+And I will alwaysssss love uhhhh the way uh want 🫠🤍<br>  
+Loveeeee uh alottt begummm 🤍  
+</p>  
+  
+</div>  
   
 <script>  
   
-const message = `Mere ladlyyyyy future begummmm  
+function openEnvelope(){  
   
-Ma jane se pehle ye kahna chahta k    
-  
-I promise that k nikah k bad tm ne jasa Socha hua hm wase h life guzre g    
-Blkay us se b kahin gunah zayda axhe    
-  
-Ma gurente deta k hmre life same wase h ho g jasa tm chahti jasa hm dono ne mil kr socha hua ❤️    
-  
-Jasa tm ne muje call pr bataya thaaaaaaa bilkul wasaaa hiiiii    
-  
-Jasa tm chahti ek ghr ho us ma srf ma or tm    
-Hm mil kr cooking krein    
-  
-Ma talwat kru or mere shoulder pr tmra sr    
-  
-Bilkul asa he ho ga begum    
-I promise 🤍    
-  
-Ma talwat pr ke sunao ga tm mere shoulder pr sr rkna 🤍    
-  
-Dherrr sare batein krein ge hr topic k relatedd    
-  
-Kabheeee ma bolo gaaa tm sunaaa    
-Kabhe tm bolna ma suno gaaaa    
-  
-Sameeeee dressing krein g jaha b jain ge    
-  
-Tme khd apne hatho se kana kilaua kro ga    
-Tme khd apne hato se mehndi lagaya kro gaa    
-  
-Apne hatho se tmre hatho ma churian pehnaya kru ga ❤️    
-  
-Khd tme rings pehnaya kro ga apne se 🤍    
-  
-Tmre balo pr brush b ma h kia kru ga 🫠❤️    
-  
-Hr chzzz hm mil kr krein h    
-  
-Bs ma itna kahna chahta jasa tm chahti hm waseeee h life gusre g mere ladlyyyy begummmmm 🤍    
-  
-Tmra hathh kabhii ni chorne wala    
-  
-Begummmm ma tm se behadd pyar krta    
-Khd se b zaydaaaaaaaaaaaaaaa    
-  
-Maaaa srfff tmraaaaa huuuuuuu    
-  
-SRF TMAAAHARAAAA    
-  
-I will really missss uhh alotttt Begummmmmm 🫠❤️    
-  
-And I will alwaysssss love uhhhh the way uh want 🫠🤍    
-  
-Loveeeee uh alottt begummm 🤍`;  
-  
-function openLetter(){  
-  
-let pass1 = prompt("Enter password");  
+let pass1 = prompt("Enter password to open the letter");  
   
 if(pass1 === "zanoor"){  
   
@@ -167,12 +118,7 @@ let pass2 = prompt("Enter second password");
 if(pass2 === "Mere ladlyyyyy future begummmm"){  
   
 document.querySelector(".envelope").style.display="none";  
-document.getElementById("letter").style.display="block";  
-  
-document.getElementById("music").play();  
-  
-typeText();  
-hearts();  
+document.getElementById("msg").style.display="block";  
   
 }else{  
 alert("Wrong second password");  
@@ -181,46 +127,6 @@ alert("Wrong second password");
 }else{  
 alert("Wrong password");  
 }  
-  
-}  
-  
-function typeText(){  
-  
-let i=0;  
-let speed=40;  
-  
-function typing(){  
-  
-if(i < message.length){  
-document.getElementById("text").innerHTML += message.charAt(i);  
-i++;  
-setTimeout(typing,speed);  
-}  
-  
-}  
-  
-typing();  
-  
-}  
-  
-function hearts(){  
-  
-setInterval(()=>{  
-  
-let heart=document.createElement("div");  
-heart.classList.add("heart");  
-heart.innerHTML="❤️";  
-  
-heart.style.left=Math.random()*100+"vw";  
-heart.style.animationDuration=(3+Math.random()*5)+"s";  
-  
-document.body.appendChild(heart);  
-  
-setTimeout(()=>{  
-heart.remove();  
-},8000);  
-  
-},300);  
   
 }  
   
